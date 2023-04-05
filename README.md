@@ -2,7 +2,28 @@
 
 Modify CRC32 hash of a file.
 
-## Usage
+<table width="100%">
+  <thead>
+    <tr>
+      <th width="50%">GUI</th>
+      <th width="50%">CLI</th>
+    </tr>
+  </thead>
+  <tbody align="center">
+    <tr>
+      <td width="50%">
+        <img src="https://user-images.githubusercontent.com/99479536/229995470-b9654beb-1d8b-4d9b-a0ce-e2ca781444aa.gif"/>
+      </td>
+      <td width="50%">
+        <a href="https://asciinema.org/a/soayvMFqa7GTjUILd2YxjvGMG">
+          <img src="https://asciinema.org/a/soayvMFqa7GTjUILd2YxjvGMG.svg"/>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## CLI Usage
 
 ```
 Usage: modify-crc32 <filename> <new_crc32> [-x]
@@ -17,7 +38,3 @@ Options:
   -x, --execute     don't prompt when patching the file
   --help            display usage information
 ```
-
-## Demo
-
-[![asciicast](https://asciinema.org/a/soayvMFqa7GTjUILd2YxjvGMG.svg)](https://asciinema.org/a/soayvMFqa7GTjUILd2YxjvGMG)

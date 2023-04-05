@@ -22,10 +22,8 @@ jobs:
     needs: create-release
     strategy:
       matrix:
-        os:
-          - ubuntu-latest
-          - macos-latest
-          - windows-latest
+        binary: [cli, gui]
+        os: [ubuntu-latest, macos-latest, windows-latest]
 
     runs-on: ${{ matrix.os }}
 
@@ -45,6 +43,8 @@ jobs:
       - name: Upload binary
         uses: taiki-e/upload-rust-binary-action@v1
         with:
-          bin: modify-crc32
+          bin: modify-crc32-${{ matrix.binary }}
+          no_default_features: true
+          features: ${{ matrix.binary }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
